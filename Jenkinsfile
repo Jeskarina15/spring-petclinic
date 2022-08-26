@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven 'maven:3.5.0'
+        maven "maven:3.5.0"
     }
     stages {
         stage('Version') {
@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t grupo04/spring-petclinic:latest .'
+                sh "docker build -t grupo04/spring-petclinic:latest ."
             }
         }
         stage('SonarQube analysis') {
